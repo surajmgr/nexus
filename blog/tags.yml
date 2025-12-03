@@ -1,0 +1,14 @@
+nexus:
+  label: Nexus
+  permalink: /nexus
+  description: Post related to Nexus
+
+general:
+  label: General
+  permalink: /general
+  description: Post related to general topics
+
+how-to:
+  label: How To
+  permalink: /how-to
+  description: Post related to how to do something

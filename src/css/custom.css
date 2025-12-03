@@ -1,0 +1,580 @@
+/**
+ * Better Auth Inspired Minimalist Styling
+ * Pure Black & White Design
+ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+	/* Minimalist Colors - Light Mode */
+	--foreground: #000;
+	--background: #fff;
+	--gray-50: #fafafa;
+	--gray-100: #f5f5f5;
+	--gray-200: #e5e5e5;
+	--gray-300: #d4d4d4;
+	--gray-400: #a3a3a3;
+	--gray-500: #737373;
+	--gray-600: #666666;
+	/* Improved contrast */
+	--gray-700: #404040;
+	--gray-800: #262626;
+	--gray-900: #171717;
+
+	/* Docusaurus Overrides */
+	--ifm-color-primary: #000;
+	--ifm-color-primary-dark: #000;
+	--ifm-color-primary-darker: #000;
+	--ifm-color-primary-darkest: #000;
+	--ifm-color-primary-light: #262626;
+	--ifm-color-primary-lighter: #404040;
+	--ifm-color-primary-lightest: #525252;
+
+	--ifm-font-family-base: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+	--ifm-background-color: var(--background);
+	--ifm-background-surface-color: var(--background);
+
+	--ifm-navbar-background-color: var(--background);
+	--ifm-navbar-height: 54px;
+
+	--ifm-footer-background-color: var(--background);
+	--ifm-footer-color: var(--gray-600);
+	--ifm-footer-link-color: var(--gray-600);
+
+	--ifm-link-color: var(--foreground);
+	--ifm-link-hover-color: var(--gray-700);
+
+	--border-color: var(--gray-200);
+	--canny-background-color: var(--background);
+
+	/* Spacing */
+	--ifm-spacing-horizontal: 1.5rem;
+	--ifm-heading-margin-bottom: 1rem;
+}
+
+[data-theme='dark'] {
+	/* Minimalist Colors - Dark Mode */
+	--foreground: #fff;
+	--background: #000;
+	--gray-50: #171717;
+	--gray-100: #262626;
+	--gray-200: #404040;
+	--gray-300: #525252;
+	--gray-400: #737373;
+	--gray-500: #b3b3b3;
+	/* Improved contrast */
+	--gray-600: #d4d4d4;
+	--gray-700: #e5e5e5;
+	--gray-800: #f5f5f5;
+	--gray-900: #fafafa;
+
+	--ifm-color-primary: #fff;
+	--ifm-color-primary-dark: #fff;
+	--ifm-color-primary-darker: #fff;
+	--ifm-color-primary-darkest: #fff;
+	--ifm-color-primary-light: #f5f5f5;
+	--ifm-color-primary-lighter: #fafafa;
+	--ifm-color-primary-lightest: #fff;
+
+	--ifm-navbar-background-color: var(--background);
+	--border-color: var(--gray-200);
+
+	--ifm-background-color: var(--background);
+	--ifm-background-surface-color: var(--background);
+
+	--ifm-footer-color: var(--gray-500);
+	--ifm-footer-link-color: var(--gray-500);
+	--canny-background-color: #121212;
+}
+
+/* Global Reset & Base */
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	background-image: none;
+	font-family: var(--ifm-font-family-base);
+}
+
+/* ============================================
+	 NAVBAR
+	 ============================================ */
+
+.navbar {
+	border-bottom: 1px solid var(--border-color);
+	box-shadow: none;
+	backdrop-filter: none;
+}
+
+.navbar__logo {
+	display: flex;
+	align-items: center;
+}
+
+.navbar__title {
+	font-weight: 600;
+	font-size: 1rem;
+	letter-spacing: -0.02em;
+	color: var(--foreground);
+}
+
+.navbar__link {
+	font-weight: 400;
+	font-size: 0.9375rem;
+	color: var(--gray-600);
+	transition: color 0.2s ease;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+	color: var(--foreground);
+	background: transparent;
+}
+
+/* Fix oversized dropdown arrow */
+.navbar__link--dropdown::after {
+	width: 0.35rem !important;
+	height: 0.35rem !important;
+	border-width: 0.1rem !important;
+	margin-left: 0.3rem;
+}
+
+/* ============================================
+	 FOOTER
+	 ============================================ */
+
+.footer {
+	border-top: 1px solid var(--border-color);
+	padding: 3rem 0;
+	background: var(--background);
+}
+
+.footer__title {
+	font-weight: 600;
+	font-size: 0.9375rem;
+	color: var(--foreground);
+	margin-bottom: 1rem;
+	letter-spacing: -0.01em;
+}
+
+.footer__link-item {
+	font-size: 0.9375rem;
+	color: var(--gray-600);
+	transition: color 0.2s ease;
+}
+
+.footer__link-item:hover {
+	color: var(--foreground);
+	text-decoration: none;
+}
+
+/* ============================================
+	 HOMEPAGE HERO
+	 ============================================ */
+
+.hero-banner {
+	padding: 6rem 0 4rem;
+	text-align: center;
+	background: transparent;
+}
+
+.hero-title {
+	font-size: 3.5rem;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+	line-height: 1.1;
+	margin-bottom: 1.25rem;
+	color: var(--foreground);
+}
+
+.hero-title span {
+	color: var(--foreground);
+}
+
+.hero-subtitle {
+	font-size: 1.1875rem;
+	color: var(--gray-600);
+	font-weight: 400;
+	max-width: 600px;
+	margin: 0 auto 2.5rem;
+	line-height: 1.65;
+}
+
+/* ============================================
+	 CARDS (Bento / Grid)
+	 ============================================ */
+
+.bento-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	padding: 2rem 0;
+}
+
+.bento-card {
+	background: var(--background);
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	transition: border-color 0.2s ease;
+	height: 100%;
+	text-decoration: none !important;
+	color: inherit !important;
+}
+
+.bento-card:hover {
+	border-color: var(--foreground);
+}
+
+.bento-card--large {
+	grid-column: span 2;
+}
+
+.bento-card--tall {
+	grid-row: span 2;
+}
+
+.bento-icon {
+	width: 36px;
+	height: 36px;
+	border-radius: 6px;
+	border: 1px solid var(--border-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 1rem;
+	font-size: 0.875rem;
+	font-weight: 600;
+	background: var(--background);
+	color: var(--foreground);
+}
+
+.bento-title {
+	font-size: 1.0625rem;
+	font-weight: 600;
+	margin-bottom: 0.625rem;
+	color: var(--foreground);
+	letter-spacing: -0.02em;
+	line-height: 1.3;
+}
+
+.bento-desc {
+	font-size: 0.9375rem;
+	color: var(--gray-600);
+	line-height: 1.65;
+	flex-grow: 1;
+}
+
+.bento-arrow {
+	margin-top: 1rem;
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: var(--gray-600);
+	opacity: 0;
+	transform: translateX(-4px);
+	transition: all 0.2s ease;
+	display: flex;
+	align-items: center;
+	gap: 0.25rem;
+}
+
+.bento-card:hover .bento-arrow {
+	opacity: 1;
+	transform: translateX(0);
+	color: var(--foreground);
+}
+
+/* ============================================
+	 BUTTONS
+	 ============================================ */
+
+.button {
+	border-radius: 6px;
+	font-weight: 500;
+	padding: 0 1.5rem;
+	height: 42px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s ease;
+	font-size: 0.9375rem;
+	letter-spacing: -0.01em;
+}
+
+.button--primary {
+	background: var(--foreground);
+	color: var(--background);
+	border: 1px solid var(--foreground);
+}
+
+.button--primary:hover {
+	background: var(--gray-800);
+	color: var(--background);
+	border-color: var(--gray-800);
+}
+
+[data-theme='dark'] .button--primary:hover {
+	background: var(--gray-100);
+	color: var(--foreground);
+	border-color: var(--gray-100);
+}
+
+.button--secondary {
+	background: var(--background);
+	color: var(--foreground);
+	border: 1px solid var(--border-color);
+}
+
+.button--secondary:hover {
+	border-color: var(--foreground);
+	background: var(--background);
+}
+
+/* ============================================
+	 RESPONSIVE
+	 ============================================ */
+
+@media (max-width: 996px) {
+	.bento-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.bento-card--large {
+		grid-column: span 2;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero-title {
+		font-size: 2.5rem;
+		letter-spacing: -0.03em;
+	}
+
+	.hero-subtitle {
+		font-size: 1.0625rem;
+		line-height: 1.6;
+	}
+
+	.bento-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.bento-card--large,
+	.bento-card--tall {
+		grid-column: span 1;
+		grid-row: span 1;
+	}
+
+	.navbar__link {
+		font-size: 1rem;
+	}
+}
+
+/* ============================================
+	 CODE BLOCKS
+	 ============================================ */
+
+code {
+	background: var(--gray-100);
+	border: 1px solid var(--border-color);
+	border-radius: 4px;
+	font-size: 0.9em;
+	padding: 0.2em 0.45em;
+	color: var(--foreground);
+	font-weight: 450;
+}
+
+pre code {
+	background: transparent;
+	border: none;
+	padding: 1em;
+	font-weight: 400;
+}
+
+/* ============================================
+	 SIDEBAR
+	 ============================================ */
+
+.menu__link {
+	font-size: 0.9375rem;
+	color: var(--gray-600);
+	font-weight: 400;
+}
+
+.menu__link:hover,
+.menu__link--active {
+	color: var(--foreground);
+	background: transparent;
+	font-weight: 500;
+}
+
+/* ============================================
+	 CONTENT
+	 ============================================ */
+
+article h1 {
+	font-size: 2.5rem;
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	line-height: 1.2;
+	margin-bottom: 1.5rem;
+	color: var(--foreground);
+}
+
+article h2 {
+	font-size: 2rem;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	line-height: 1.25;
+	margin-top: 2.5rem;
+	margin-bottom: 1.25rem;
+	color: var(--foreground);
+}
+
+article h3 {
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	line-height: 1.3;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
+	color: var(--foreground);
+}
+
+article h4 {
+	font-size: 1.25rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	line-height: 1.4;
+	margin-top: 1.5rem;
+	margin-bottom: 0.75rem;
+	color: var(--foreground);
+}
+
+article h5,
+article h6 {
+	font-size: 1.0625rem;
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	line-height: 1.4;
+	margin-top: 1.25rem;
+	margin-bottom: 0.625rem;
+	color: var(--foreground);
+}
+
+article p {
+	color: var(--gray-600);
+	line-height: 1.8;
+	font-size: 1rem;
+	margin-bottom: 1.25rem;
+}
+
+article a {
+	color: var(--foreground);
+	text-decoration: underline;
+	text-decoration-color: var(--gray-300);
+	text-underline-offset: 3px;
+	text-decoration-thickness: 1px;
+	transition: text-decoration-color 0.2s ease;
+}
+
+article a:hover {
+	text-decoration-color: var(--foreground);
+}
+
+article ul,
+article ol {
+	line-height: 1.8;
+	margin-bottom: 1.25rem;
+}
+
+article li {
+	color: var(--gray-600);
+	margin-bottom: 0.5rem;
+}
+
+/* ============================================
+	 CANNY FEEDBACK WIDGET
+	 ============================================ */
+
+.canny-feedback-container {
+	width: 100%;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 25px 0 25px 0;
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+	background-color: var(--canny-background-color);
+	overflow: hidden;
+}
+
+/* Canny widget container styling */
+[data-canny] {
+	min-height: 700px;
+	transition: opacity 0.3s ease;
+}
+
+/* Override Canny default styles for better integration */
+[data-canny] * {
+	font-family: var(--ifm-font-family-base) !important;
+}
+
+/* Smooth theme transitions */
+[data-canny] {
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar for Canny widget */
+[data-canny] ::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+[data-canny] ::-webkit-scrollbar-track {
+	background: var(--gray-100);
+	border-radius: 4px;
+}
+
+[data-canny] ::-webkit-scrollbar-thumb {
+	background: var(--gray-400);
+	border-radius: 4px;
+	transition: background 0.2s ease;
+}
+
+[data-canny] ::-webkit-scrollbar-thumb:hover {
+	background: var(--gray-500);
+}
+
+/* Responsive adjustments for Canny widget */
+@media (max-width: 768px) {
+	.canny-feedback-container {
+		padding: 0;
+		border-radius: 0;
+		border-left: none;
+		border-right: none;
+	}
+
+	[data-canny] {
+		min-height: 600px;
+	}
+}
+
+/* Loading state */
+[data-canny]:empty {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 500px;
+	background: var(--gray-50);
+}
+
+[data-canny]:empty::before {
+	content: 'Loading feedback board...';
+	color: var(--gray-500);
+	font-size: 0.9375rem;
+	font-weight: 500;
+}
