@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://surajpulami.com.np/blog</id>
+    <title>Suraj Nexus Blog</title>
+    <updated>2025-12-03T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://surajpulami.com.np/blog"/>
+    <subtitle>Suraj Nexus Blog</subtitle>
+    <icon>https://surajpulami.com.np/core/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Welcome]]></title>
+        <id>https://surajpulami.com.np/blog/welcome</id>
+        <link href="https://surajpulami.com.np/blog/welcome"/>
+        <updated>2025-12-03T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to myself, I guess. This page just outlines some standard of writing blog posts in this nexus. Before that, this is built with Docusaurus.]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to myself, I guess. This page just outlines some standard of writing blog posts in this nexus. Before that, this is built with Docusaurus.</p>
+<p>To add a new blog post, simply add a new Markdown file to the <code>blog</code> directory or a folder in the <code>blog</code> directory with <code>index.md</code> file. The date of the blog post can be extracted from the filename, such as <code>2025-12-03-welcome.md</code> or <code>2025-12-03-welcome/index.md</code>.</p>
+<p>To add a new author, simply add a new YAML configuration to the <code>authors.yml</code> file.</p>
+<p>As for the images and styles, you can use the same as in Markdown files.</p>
+<p>For configuing this blog post itself, you have to edit the metadata at the top of the file. The metadata is in YAML format and is denoted by <code>---</code> at the top and bottom of the file.
+Here are some of the metadata fields:</p>
+<ul>
+<li class=""><code>slug</code>: The slug of the blog post. This is the URL of the blog post.</li>
+<li class=""><code>title</code>: The title of the blog post.</li>
+<li class=""><code>authors</code>: The authors of the blog post. This is an array of author slugs.</li>
+<li class=""><code>tags</code>: The tags of the blog post. This is an array of tag slugs.</li>
+</ul>
+<p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in Docusaurus config.</p>]]></content>
+        <author>
+            <name>Suraj Pulami</name>
+            <uri>https://surajpulami.com.np</uri>
+        </author>
+        <category label="Nexus" term="Nexus"/>
+        <category label="General" term="General"/>
+        <category label="How To" term="How To"/>
+    </entry>
+</feed>

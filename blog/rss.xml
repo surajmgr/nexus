@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="rss.xsl"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Suraj Nexus Blog</title>
+        <link>https://surajpulami.com.np/blog</link>
+        <description>Suraj Nexus Blog</description>
+        <lastBuildDate>Wed, 03 Dec 2025 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <item>
+            <title><![CDATA[Welcome]]></title>
+            <link>https://surajpulami.com.np/blog/welcome</link>
+            <guid>https://surajpulami.com.np/blog/welcome</guid>
+            <pubDate>Wed, 03 Dec 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Welcome to myself, I guess. This page just outlines some standard of writing blog posts in this nexus. Before that, this is built with Docusaurus.]]></description>
+            <content:encoded><![CDATA[<p>Welcome to myself, I guess. This page just outlines some standard of writing blog posts in this nexus. Before that, this is built with Docusaurus.</p>
+<p>To add a new blog post, simply add a new Markdown file to the <code>blog</code> directory or a folder in the <code>blog</code> directory with <code>index.md</code> file. The date of the blog post can be extracted from the filename, such as <code>2025-12-03-welcome.md</code> or <code>2025-12-03-welcome/index.md</code>.</p>
+<p>To add a new author, simply add a new YAML configuration to the <code>authors.yml</code> file.</p>
+<p>As for the images and styles, you can use the same as in Markdown files.</p>
+<p>For configuing this blog post itself, you have to edit the metadata at the top of the file. The metadata is in YAML format and is denoted by <code>---</code> at the top and bottom of the file.
+Here are some of the metadata fields:</p>
+<ul>
+<li class=""><code>slug</code>: The slug of the blog post. This is the URL of the blog post.</li>
+<li class=""><code>title</code>: The title of the blog post.</li>
+<li class=""><code>authors</code>: The authors of the blog post. This is an array of author slugs.</li>
+<li class=""><code>tags</code>: The tags of the blog post. This is an array of tag slugs.</li>
+</ul>
+<p><strong>And if you don't want a blog</strong>: just delete this directory, and use <code>blog: false</code> in Docusaurus config.</p>]]></content:encoded>
+            <category>Nexus</category>
+            <category>General</category>
+            <category>How To</category>
+        </item>
+    </channel>
+</rss>
