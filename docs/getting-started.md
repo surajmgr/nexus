@@ -60,6 +60,6 @@ On mobile devices:
 
 These steps are only here for my recollection of the steps I took to create this nexus. You can either skip this or go through it as a reference.
 
-- [Learn how to add new projects](./projects/adding-projects.md)
+- [Learn how to add new projects](./projects/adding-projects.mdx)
 - [Understand version management](./versioning.md)
 - [Explore existing projects](/fortihub/intro)

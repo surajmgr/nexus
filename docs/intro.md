@@ -19,7 +19,7 @@ At the moment, I have only one project here: [FortiHub](/fortihub/intro). To be 
 ### Main Documentation
 These links are only useful for myself. As I easily forget the structure of this nexus, I have to write them down somewhere.
 - [Getting Started](./getting-started.md) - Learn how to navigate this documentation hub
-- [Adding Projects](./projects/adding-projects.md) - Guide for adding new project documentation
+- [Adding Projects](./projects/adding-projects.mdx) - Guide for adding new project documentation
 - [Versioning](./versioning.md) - How to manage documentation versions
 
 ### Blog

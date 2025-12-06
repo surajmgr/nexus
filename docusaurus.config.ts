@@ -60,8 +60,17 @@ const config: Config = {
         path: 'projects/fortihub/docs',
         routeBasePath: 'fortihub',
         sidebarPath: './projects/fortihub/sidebars.ts',
-        editUrl:
-          'https://github.com/surajmgr/nexus/tree/main/'
+        editUrl: 'https://github.com/surajmgr/nexus/tree/main/'
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'sparqchat',
+        path: 'projects/sparqchat/docs',
+        routeBasePath: 'sparqchat',
+        sidebarPath: './projects/sparqchat/sidebars.ts',
+        editUrl: 'https://github.com/surajmgr/nexus/tree/main/',
       },
     ],
     './src/plugins/feedback-route-plugin/index.ts',
@@ -108,12 +117,11 @@ const config: Config = {
               to: '/fortihub/intro',
               label: 'FortiHub',
             },
+            {
+              to: '/sparqchat/intro',
+              label: 'SparqChat',
+            },
           ],
-        },
-        {
-          type: 'docsVersionDropdown',
-          docsPluginId: 'fortihub',
-          position: 'right',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         { to: '/feedback', label: 'Community', position: 'left' },
