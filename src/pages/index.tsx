@@ -1,111 +1,38 @@
 import React, { JSX } from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import Heading from '@theme/Heading';
-
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
-  return (
-    <header className="hero-banner">
-      <div className="container">
-        <Heading as="h1" className="hero-title">
-          Suraj Pulami <span>Nexus</span>
-        </Heading>
-        <p className="hero-subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--primary button--lg"
-            to="/docs/intro">
-            Get Started
-          </Link>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/projects/adding-projects"
-            style={{ marginLeft: '1rem' }}>
-            Add Project
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
-
-function BentoCard({ title, description, to, icon, className, arrow = true }: {
-  title: string;
-  description: string;
-  to: string;
-  icon?: React.ReactNode;
-  className?: string;
-  arrow?: boolean;
-}) {
-  return (
-    <Link to={to} className={clsx('bento-card', className)}>
-      {icon && <div className="bento-icon">
-        {icon}
-      </div>}
-      <h3 className="bento-title">{title}</h3>
-      <p className="bento-desc">{description}</p>
-      {arrow && (
-        <div className="bento-arrow">
-          Explore <span style={{ fontSize: '1em', lineHeight: 1 }}>→</span>
-        </div>
-      )}
-    </Link>
-  );
-}
-
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title="Home"
-      description="Centralized documentation hub for all projects">
-      <HomepageHeader />
-      <main>
-        <div className="container margin-bottom--xl">
-          <div className="bento-grid">
-            {/* Main Guide - Large Card */}
-            <BentoCard
-              className="bento-card--large"
-              title="Nexus Guide"
-              description="Everything you need to know about navigating, writing, and maintaining documentation in this hub. Learn about our standards and best practices."
-              to="/docs/intro"
-            />
-
-            {/* Versioning - Standard Card */}
-            <BentoCard
-              title="Versioning"
-              description="Learn how to manage multiple versions of your documentation."
-              to="/docs/versioning"
-            />
-
-            {/* FortiHub - Tall Card */}
-            <BentoCard
-              className="bento-card"
-              title="FortiHub"
-              description="Complete documentation for FortiHub. Includes API references, integration guides, and tutorials."
-              to="/fortihub/intro"
-            />
-
-            {/* Add Project - Standard Card */}
-            <BentoCard
-              title="Add New Project"
-              description="Step-by-step guide to add another project in this nexus."
-              to="/docs/projects/adding-projects"
-            />
-
-            {/* Blog - Standard Card */}
-            <BentoCard
-              title="Updates & Blog"
-              description="Stay updated with the latest changes and announcements."
-              to="/blog"
-            />
-          </div>
-        </div>
+      description="Personal documentation hub and portfolio of Suraj Pulami">
+      <main className={styles.container}>
+        <header className={styles.header}>
+          <h1 className={styles.title}>
+            Hello, I'm Suraj <span className={styles.wave}>ツ</span>
+          </h1>
+          <img src="/authors/surajmgr.png" alt="Suraj Pulami" className={styles.profileImage} />
+        </header>
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>About me</h2>
+          <p className={styles.text}>
+            I am a software engineer passionate about building scalable systems and writing clear documentation.
+            This site serves as my personal knowledge base, where I document my <Link to="/docs/projects" className={styles.link}>projects</Link>.
+          </p>
+          <p className={styles.text}>
+            I am currently working as a Full Stack Developer at <Link to="https://www.linkedin.com/company/sewaverse-official" className={styles.link}>Sewaverse Enterprise</Link>. Here, I am responsible for designing and developing the platform’s core features and API. Before this, I interned at <Link to="https://www.linkedin.com/company/onepointfinserv/" className={styles.link}>OnePoint Financial Services Pvt. Ltd.</Link> as a Golang Developer. I was also part of the QA team responsible for ensuring the functionality of the Laxmi Bank project.
+          </p>
+          <p className={styles.text}>
+            As for my education, I graduated from Tribhuvan University with a Bachelor's degree in Computer Science and Information Technology.
+          </p>
+          <p className={styles.text}>
+            Besides these, I have a strong interest in stories such as novels, manga, and manhwa. I also enjoy reading about history and science.
+            In my free time, I enjoy exploring new technologies, especially services that cost little to nothing.
+          </p>
+        </section>
       </main>
     </Layout>
   );

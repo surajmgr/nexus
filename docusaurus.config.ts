@@ -31,7 +31,7 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/surajmgr/nexus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/surajmgr/nexus/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -40,7 +40,7 @@ const config: Config = {
             xslt: true,
           },
           editUrl:
-            'https://github.com/surajmgr/nexus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/surajmgr/nexus/tree/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
@@ -60,6 +60,8 @@ const config: Config = {
         path: 'projects/fortihub/docs',
         routeBasePath: 'fortihub',
         sidebarPath: './projects/fortihub/sidebars.ts',
+        editUrl:
+          'https://github.com/surajmgr/nexus/tree/main/'
       },
     ],
     './src/plugins/feedback-route-plugin/index.ts',

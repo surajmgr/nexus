@@ -2,112 +2,167 @@
  * CSS for Homepage Components
  */
 
-.heroBanner {
-  padding: 6rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
 }
 
-.buttons {
+/* Header Section */
+.header {
+  margin-bottom: 4rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-.versionBadge {
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 0;
+  color: var(--ifm-color-emphasis-900);
+  line-height: 1.1;
+}
+
+.wave {
   display: inline-block;
-  background: var(--geist-foreground);
-  color: var(--geist-background);
-  padding: 0.25rem 0.75rem;
-  border-radius: 999px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-left: 0.5rem;
-  vertical-align: middle;
-  border: 1px solid var(--geist-foreground);
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
+  margin-left: 10px;
 }
 
-.addProjectCard {
-  background: var(--geist-background);
-  border-radius: 8px;
-  border: 1px dashed var(--accents-3);
-  padding: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 280px;
-  transition: all 0.15s ease;
+@keyframes wave {
+  0% {
+    transform: rotate(0.0deg)
+  }
+
+  10% {
+    transform: rotate(14.0deg)
+  }
+
+  20% {
+    transform: rotate(-8.0deg)
+  }
+
+  30% {
+    transform: rotate(14.0deg)
+  }
+
+  40% {
+    transform: rotate(-4.0deg)
+  }
+
+  50% {
+    transform: rotate(10.0deg)
+  }
+
+  60% {
+    transform: rotate(0.0deg)
+  }
+
+  100% {
+    transform: rotate(0.0deg)
+  }
 }
 
-.addProjectCard:hover {
-  border-color: var(--geist-foreground);
-  background: var(--accents-1);
+.profileImage {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transform: rotate(3deg);
+  transition: transform 0.3s ease;
 }
 
-[data-theme='dark'] .addProjectCard:hover {
-  background: var(--accents-1);
+.profileImage:hover {
+  transform: rotate(0deg) scale(1.05);
 }
 
-.addProjectLink {
-  text-align: center;
-  text-decoration: none !important;
-  color: inherit !important;
-  width: 100%;
+/* Section Styling */
+.section {
+  margin-bottom: 4rem;
 }
 
-.addProjectIcon {
-  font-size: 3rem;
-  color: var(--accents-3);
-  margin-bottom: 1rem;
-  font-weight: 300;
-  line-height: 1;
-  transition: color 0.15s ease;
+.sectionTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-900);
+  border-bottom: 2px solid var(--ifm-color-emphasis-200);
+  padding-bottom: 0.5rem;
+  display: inline-block;
 }
 
-.addProjectCard:hover .addProjectIcon {
-  color: var(--geist-foreground);
+.text {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.5rem;
 }
 
-.addProjectLink h3 {
-  color: var(--geist-foreground);
-  margin-bottom: 0.5rem;
-  font-size: 1.25rem;
-  font-weight: 600;
+.link {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 500;
 }
 
-.addProjectLink p {
-  color: var(--accents-5);
+.link:hover {
+  color: var(--ifm-color-primary-darker);
+  text-decoration: none;
+}
+
+/* Project List */
+.projectList {
+  list-style: none;
+  padding: 0;
   margin: 0;
-  font-size: 0.9rem;
 }
 
-@media (max-width: 768px) {
-  .heroBanner {
-    padding: 4rem 0;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  .buttons a {
-    width: 100%;
-    max-width: 300px;
-  }
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.buttons {
+.projectItem {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: baseline;
+}
+
+.projectBullet {
+  color: var(--ifm-color-emphasis-400);
+  margin-right: 0.75rem;
+}
+
+.projectLink {
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  margin-right: 0.5rem;
+}
+
+.projectLink:hover {
+  color: var(--ifm-color-primary);
+}
+
+.projectDesc {
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .profileImage {
+    width: 80px;
+    height: 80px;
+  }
 }
