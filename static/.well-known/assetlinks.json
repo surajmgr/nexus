@@ -1,12 +1,22 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.kamasystems.konnected",
       "sha256_cert_fingerprints": [
         "EA:86:3D:0B:81:11:1C:86:DE:80:EB:18:C9:2A:EF:3F:4E:B9:79:6F:62:77:48:B3:BC:CC:1A:3D:5C:B2:BD:10"
       ]
+    }
+  },
+  {
+    "relation": ["delegate_permission/common.get_login_creds"],
+    "target": {
+      "namespace": "web",
+      "site": "https://surajpulami.com.np"
     }
   }
 ]
