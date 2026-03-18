@@ -8,3 +8,4 @@ At the moment, I have only one project here: [FortiHub](/fortihub/intro). To be 
 - KonnectEd - Education by All, for All
 - MS for AI Gateways
 - SparqChat
+- [Vocus](/vocus/intro)

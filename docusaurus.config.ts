@@ -1,52 +1,50 @@
-import { themes as prismThemes } from 'prism-react-renderer';
-import type { Config } from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: 'Suraj Nexus',
-  tagline: 'Centralized knowledge base for all projects',
-  favicon: 'core/favicon.ico',
+  title: "Suraj Pulami",
+  tagline: "Centralized knowledge base for all projects",
+  favicon: "core/favicon.ico",
   future: {
     v4: true,
   },
 
-  url: 'https://surajpulami.com.np',
-  baseUrl: '/',
+  url: "https://surajpulami.com.np",
+  baseUrl: "/",
 
-  organizationName: 'surajmgr',
-  projectName: 'nexus',
+  organizationName: "surajmgr",
+  projectName: "nexus",
   trailingSlash: false,
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: "throw",
 
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: "en",
+    locales: ["en"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          editUrl:
-            'https://github.com/surajmgr/nexus/tree/main/',
+          sidebarPath: "./sidebars.ts",
+          editUrl: "https://github.com/surajmgr/nexus/tree/main/",
         },
         blog: {
           showReadingTime: true,
           feedOptions: {
-            type: ['rss', 'atom'],
+            type: ["rss", "atom"],
             xslt: true,
           },
-          editUrl:
-            'https://github.com/surajmgr/nexus/tree/main/',
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          editUrl: "https://github.com/surajmgr/nexus/tree/main/",
+          onInlineTags: "warn",
+          onInlineAuthors: "warn",
+          onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
@@ -54,145 +52,159 @@ const config: Config = {
 
   plugins: [
     [
-      '@docusaurus/plugin-content-docs',
+      "@docusaurus/plugin-content-docs",
       {
-        id: 'fortihub',
-        path: 'projects/fortihub/docs',
-        routeBasePath: 'fortihub',
-        sidebarPath: './projects/fortihub/sidebars.ts',
-        editUrl: 'https://github.com/surajmgr/nexus/tree/main/'
+        id: "fortihub",
+        path: "projects/fortihub/docs",
+        routeBasePath: "fortihub",
+        sidebarPath: "./projects/fortihub/sidebars.ts",
+        editUrl: "https://github.com/surajmgr/nexus/tree/main/",
       },
     ],
     [
-      '@docusaurus/plugin-content-docs',
+      "@docusaurus/plugin-content-docs",
       {
-        id: 'sparqchat',
-        path: 'projects/sparqchat/docs',
-        routeBasePath: 'sparqchat',
-        sidebarPath: './projects/sparqchat/sidebars.ts',
-        editUrl: 'https://github.com/surajmgr/nexus/tree/main/',
+        id: "sparqchat",
+        path: "projects/sparqchat/docs",
+        routeBasePath: "sparqchat",
+        sidebarPath: "./projects/sparqchat/sidebars.ts",
+        editUrl: "https://github.com/surajmgr/nexus/tree/main/",
       },
     ],
-    './src/plugins/feedback-route-plugin/index.ts',
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "vocus",
+        path: "projects/vocus/docs",
+        routeBasePath: "vocus",
+        sidebarPath: "./projects/vocus/sidebars.ts",
+        editUrl: "https://github.com/surajmgr/nexus/tree/main/",
+      },
+    ],
+    "./src/plugins/feedback-route-plugin/index.ts",
   ],
 
   themeConfig: {
-    image: 'core/social.jpg',
+    image: "core/social.jpg",
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: "dark",
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
     metadata: [
       {
-        name: 'apple-mobile-web-app-title',
-        content: 'Nexus',
+        name: "apple-mobile-web-app-title",
+        content: "Nexus",
       },
     ],
     navbar: {
-      title: 'SURAJ NEXUS',
+      title: "SURAJ PULAMI",
       // hideOnScroll: true,
       logo: {
-        alt: 'Suraj Nexus Logo',
-        srcDark: 'core/logo-white.png',
-        src: 'core/logo-black.png',
+        alt: "Suraj Pulami Logo",
+        srcDark: "core/logo-white.png",
+        src: "core/logo-black.png",
         style: {
-          width: '18px',
-          height: '18px',
+          width: "18px",
+          height: "18px",
         },
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'guideSidebar',
-          position: 'left',
-          label: 'Guide',
+          type: "docSidebar",
+          sidebarId: "guideSidebar",
+          position: "left",
+          label: "Guide",
         },
         {
-          type: 'dropdown',
-          label: 'Projects',
-          position: 'left',
+          type: "dropdown",
+          label: "Projects",
+          position: "left",
           items: [
             {
-              to: '/fortihub/intro',
-              label: 'FortiHub',
+              to: "/vocus/intro",
+              label: "Vocus",
             },
             {
-              to: '/sparqchat/intro',
-              label: 'SparqChat',
+              to: "/fortihub/intro",
+              label: "FortiHub",
+            },
+            {
+              to: "/sparqchat/intro",
+              label: "SparqChat",
             },
           ],
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
-        { to: '/feedback', label: 'Community', position: 'left' },
+        { to: "/blog", label: "Blog", position: "left" },
+        { to: "/feedback", label: "Community", position: "left" },
         {
-          href: 'https://github.com/surajmgr',
-          position: 'right',
-          label: 'GitHub',
-          className: 'header-github-link',
-          'aria-label': 'GitHub repository',
+          href: "https://github.com/surajmgr",
+          position: "right",
+          label: "GitHub",
+          className: "header-github-link",
+          "aria-label": "GitHub repository",
         },
         {
-          type: 'search',
-          position: 'right',
+          type: "search",
+          position: "right",
         },
       ],
     },
     footer: {
       links: [
         {
-          title: 'Documentation',
+          title: "Documentation",
           items: [
             {
-              label: 'Getting Started',
-              to: '/docs/intro',
+              label: "Getting Started",
+              to: "/docs/intro",
             },
             {
-              label: 'Adding Projects',
-              to: '/docs/projects/adding-projects',
+              label: "Adding Projects",
+              to: "/docs/projects/adding-projects",
             },
             {
-              label: 'Versioning Guide',
-              to: '/docs/versioning',
+              label: "Versioning Guide",
+              to: "/docs/versioning",
             },
           ],
         },
         {
-          title: 'Projects',
+          title: "Projects",
           items: [
             {
-              label: 'FortiHub',
-              to: '/fortihub/intro',
+              label: "FortiHub",
+              to: "/fortihub/intro",
             },
             {
-              label: 'All Projects',
-              to: '/',
+              label: "All Projects",
+              to: "/",
             },
           ],
         },
         {
-          title: 'Resources',
+          title: "Resources",
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: "Blog",
+              to: "/blog",
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/surajmgr',
+              label: "GitHub",
+              href: "https://github.com/surajmgr",
             },
           ],
         },
         {
-          title: 'Legal',
+          title: "Legal",
           items: [
             {
-              label: 'Privacy Policy',
-              to: '/privacy',
+              label: "Privacy Policy",
+              to: "/privacy",
             },
             {
-              label: 'Terms of Service',
-              to: '/terms',
+              label: "Terms of Service",
+              to: "/terms",
             },
           ],
         },
@@ -240,45 +252,45 @@ const config: Config = {
 
   headTags: [
     {
-      tagName: 'link',
+      tagName: "link",
       attributes: {
-        rel: 'icon',
-        type: 'image/png',
-        href: '/core/favicon-96x96.png',
-        sizes: '96x96',
+        rel: "icon",
+        type: "image/png",
+        href: "/core/favicon-96x96.png",
+        sizes: "96x96",
       },
     },
     {
-      tagName: 'link',
+      tagName: "link",
       attributes: {
-        rel: 'icon',
-        type: 'image/svg+xml',
-        href: '/core/favicon.svg',
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/core/favicon.svg",
       },
     },
     {
-      tagName: 'link',
+      tagName: "link",
       attributes: {
-        rel: 'icon',
-        type: 'shortcut icon',
-        href: '/core/favicon.ico',
+        rel: "icon",
+        type: "shortcut icon",
+        href: "/core/favicon.ico",
       },
     },
     {
-      tagName: 'link',
+      tagName: "link",
       attributes: {
-        rel: 'icon',
-        type: 'apple-touch-icon',
-        href: '/core/apple-touch-icon.png',
+        rel: "icon",
+        type: "apple-touch-icon",
+        href: "/core/apple-touch-icon.png",
       },
     },
     {
-      tagName: 'link',
+      tagName: "link",
       attributes: {
-        rel: 'manifest',
-        href: '/core/site.webmanifest',
+        rel: "manifest",
+        href: "/core/site.webmanifest",
       },
-    }
+    },
   ],
 };
 
