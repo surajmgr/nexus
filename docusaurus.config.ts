@@ -74,6 +74,16 @@ const config: Config = {
     [
       "@docusaurus/plugin-content-docs",
       {
+        id: "cryt",
+        path: "projects/cryt/docs",
+        routeBasePath: "cryt",
+        sidebarPath: "./projects/cryt/sidebars.ts",
+        editUrl: "https://github.com/surajmgr/nexus/tree/main/",
+      },
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
         id: "vocus",
         path: "projects/vocus/docs",
         routeBasePath: "vocus",
@@ -121,6 +131,10 @@ const config: Config = {
           label: "Projects",
           position: "left",
           items: [
+            {
+              to: "/cryt/intro",
+              label: "Cryt",
+            },
             {
               to: "/vocus/intro",
               label: "Vocus",
